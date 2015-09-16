@@ -38,8 +38,8 @@ class mongodb::globals (
   # Setup of the repo only makes sense globally, so we are doing it here.
   if($manage_package_repo) {
     class { '::mongodb::repo':
-      ensure        => present,
-      proxy => $repo_proxy,
+      ensure => present,
+      proxy  => $repo_proxy,
     }
   }
 }
