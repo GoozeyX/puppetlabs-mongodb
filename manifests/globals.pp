@@ -27,8 +27,9 @@ class mongodb::globals (
 
   $manage_package_repo   = undef,
   $manage_package        = undef,
+  $repo_proxy            = undef,
 
-  $repo_location         = undef,
+  $repo_proxy            = undef,
   $use_enterprise_repo   = undef,
 
   $pidfilepath           = undef,
@@ -38,7 +39,7 @@ class mongodb::globals (
   if($manage_package_repo) {
     class { '::mongodb::repo':
       ensure        => present,
-      repo_location => $repo_location,
+      proxy => $repo_proxy,
     }
   }
 }

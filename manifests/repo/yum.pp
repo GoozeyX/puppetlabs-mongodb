@@ -9,6 +9,7 @@ class mongodb::repo::yum inherits mongodb::repo {
       baseurl  => $::mongodb::repo::location,
       gpgcheck => '0',
       enabled  => '1',
+      proxy    => $::mongodb::repo::proxy,
     }
     Yumrepo['mongodb'] -> Package<|tag == 'mongodb'|>
   }

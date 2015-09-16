@@ -3,6 +3,7 @@ class mongodb::repo (
   $ensure        = $mongodb::params::ensure,
   $version       = $mongodb::params::version,
   $repo_location = undef,
+  $proxy         = undef,
 ) inherits mongodb::params {
   case $::osfamily {
     'RedHat', 'Linux': {
