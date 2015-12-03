@@ -38,7 +38,9 @@ describe 'mongodb::repo', :type => :class do
     end
     let :params do
       {
-        :proxy => 'http://proxy-server:8080'
+        :proxy => 'http://proxy-server:8080',
+        :proxy_username => 'proxyuser1',
+        :proxy_password => 'proxypassword1',
       }
     end
     it {
@@ -47,7 +49,9 @@ describe 'mongodb::repo', :type => :class do
     it do
       should contain_yumrepo('mongodb').with(
         'enabled' => '1',
-        'proxy' => 'http://proxy-server:8080'
+        'proxy' => 'http://proxy-server:8080',
+        'proxy_username' => 'proxyuser1',
+        'proxy_password' => 'proxypassword1',
         )
     end
   end

@@ -1,6 +1,6 @@
 ## Unreleased
 ### Summary
-- support setting a proxy for yum repositories
+- support setting a proxy for yum repositories with or without user/password authentication
 
 ## 2015-06-22 - Release 0.11.0
 ### Summary
