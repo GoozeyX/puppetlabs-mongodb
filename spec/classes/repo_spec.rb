@@ -47,12 +47,12 @@ describe 'mongodb::repo', :type => :class do
       is_expected.to contain_class('mongodb::repo::yum')
     }
     it do
-      should contain_yumrepo('mongodb').with(
+      should contain_yumrepo('mongodb').with({
         'enabled' => '1',
         'proxy' => 'http://proxy-server:8080',
         'proxy_username' => 'proxyuser1',
         'proxy_password' => 'proxypassword1',
-        )
+        })
     end
   end
 end
